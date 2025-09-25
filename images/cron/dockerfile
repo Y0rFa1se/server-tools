@@ -4,4 +4,7 @@ WORKDIR /app
 
 VOLUME /data
 
-CMD ["/app/data/run.sh"]
+COPY run.sh .
+RUN chmod +x run.sh
+
+CMD ["/app/run.sh"]
