@@ -1,5 +1,5 @@
 services:
-  script_runner:
+  scheduler:
     build:
       context: .
       dockerfile: dockerfile
