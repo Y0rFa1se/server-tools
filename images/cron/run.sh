@@ -1,14 +1,17 @@
 #!/bin/bash
 
-echo "test"
+cd /app/data/scripts
 
-python /app/data/scripts/test.py &
-python /app/data/scripts/test.py &
-python /app/data/scripts/test.py &
-python /app/data/scripts/test.py &
-python /app/data/scripts/test.py &
-python /app/data/scripts/test.py &
+echo "Starting all scripts in subdirectories..."
+
+for d in */
+do
+    cd "$d"
+    echo "Running script in directory: $d"
+    python3 main.py &
+    cd .. > /dev/null
+done
 
 wait
 
-echo "all done"
+echo "All scripts completed."
