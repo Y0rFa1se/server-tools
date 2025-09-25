@@ -1,1 +1,3 @@
-print("hihi")
+import time
+
+time.sleep(10)
