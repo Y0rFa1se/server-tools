@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  script_runner:
+    build: .
+    
+    container_name: cron
+    
+    restart: "no"
+    
+    volumes:
+      - ./data:/app/data
