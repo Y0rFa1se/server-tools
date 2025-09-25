@@ -2,7 +2,7 @@
 
 cd /app/data/scripts
 
-echo "Starting all scripts in subdirectories..."
+echo "Starting all scripts..."
 
 for d in */
 do
