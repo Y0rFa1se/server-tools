@@ -8,7 +8,7 @@ for d in */
 do
     cd "$d"
     echo "Running script in directory: $d"
-    ./run.sh &
+    uv run main.py &
     cd .. > /dev/null
 done
 
