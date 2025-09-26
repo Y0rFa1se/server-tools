@@ -1,0 +1,13 @@
+services:
+  hosting:
+    build:
+      context: .
+      dockerfile: dockerfile
+    
+    container_name: hosting
+    
+    restart: always
+    
+    volumes:
+      - ./data:/app/data
+  
